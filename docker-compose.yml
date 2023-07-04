@@ -1,7 +1,8 @@
 version: "2.1"
 services:
   webtop:
-    build: .
+    # build: .
+    image: magicjf/anki-tiddlyremember:latest
     container_name: webtop
     security_opt:
       - seccomp:unconfined
@@ -14,6 +15,6 @@ services:
     ports:
       - 3000:3000
       - 3001:3001
-      - 8080:8080
+      - 4000:8080
     shm_size: "2gb"
     restart: unless-stopped
