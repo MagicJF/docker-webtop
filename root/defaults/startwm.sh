@@ -1,8 +1,6 @@
 #!/bin/bash
 
-if [ -f "${HOME}"/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml ]; then
-  sed -i \
-    '/use_compositing/c <property name="use_compositing" type="bool" value="false"/>' \
-    "${HOME}"/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
-fi
-/usr/bin/xfce4-session > /dev/null 2>&1
+# sudo echo software > /config/.local/share/Anki2/gldriver6 
+# sudo echo software > /config/.local/share/Anki2/gldriver
+
+/usr/bin/xfce4-session  > /dev/null 2>&1 

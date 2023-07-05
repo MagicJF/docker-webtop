@@ -1,20 +1,17 @@
 version: "2.1"
 services:
-  webtop:
-    # build: .
-    image: magicjf/anki-tiddlyremember:latest
-    container_name: webtop
+  webtop-manual:
+    build: .
+    container_name: webtop-manual
     security_opt:
       - seccomp:unconfined
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - /home/joan/Documents/Github/Dockerizer/Webtop/jf-webtop/data:/config
+      - TZ=Europe/Madrid
     ports:
-      - 3000:3000
-      - 3001:3001
-      - 4000:8080
+      - 3033:3000
     shm_size: "2gb"
     restart: unless-stopped
+    # volumes:
+    #   - /data/apps/anki/config:/config/app
